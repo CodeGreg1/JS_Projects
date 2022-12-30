@@ -6,7 +6,6 @@ const numbersEl = document.getElementById('numbers')
 const symbolsEl = document.getElementById('symbols')
 const generateEl = document.getElementById('generate')
 const clipboardEl = document.getElementById('clipboard')
-const length =  lengthEl.value
 
 
 const randomFunc = {
@@ -26,6 +25,7 @@ clipboardEl.addEventListener('click', () => {
 })
 
 generateEl.addEventListener('click', () => {
+    const length =  lengthEl.value
     const hasLower = lowercaseEl.checked
     const hasUpper = uppercaseEl.checked
     const hasNumber = numbersEl.checked
