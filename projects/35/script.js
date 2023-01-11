@@ -6,7 +6,15 @@ var num = 0
 next.addEventListener('click', nextPic)
 prev.addEventListener('click', prevPic)
 
+let interval = setInterval(run, 3000)
+
+function run(){
+    nextPic()
+
+}
+
 function nextPic() {
+    resetInterval()
     if(num == 1500){
         num = 0;
         imgs.style.transform = `translateX(-${num}px)`
@@ -17,6 +25,7 @@ function nextPic() {
     }}
 
 function prevPic() {
+        resetInterval()
         if(num == 0){
             num = 1500;
             imgs.style.transform = `translateX(-${num}px)`
@@ -26,3 +35,7 @@ function prevPic() {
         console.log(`Next pressed ${num}`)
         }}
     
+function resetInterval() {
+    clearInterval(interval)
+    interval = setInterval(nextPic, 3000)
+}
