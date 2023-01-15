@@ -7,7 +7,7 @@ listItems.forEach(item, idx) => {
         hideAllItems()
 
         item.classList.add('active')
-        contents.classList.add('show')
+        contents[idx].classList.add('show')
     })
 }
 
