@@ -43,9 +43,12 @@ const createPokemonCard = (pokemon) => {
 	const type = main_types.find(type => poke_types.indexOf
 		(type) > -1)
 	const color = colors[type]
+
+	pokemonEl.style.backgroundColor = color
+
 	const pokemonInnerHTML = `
 	<div class="img-container">
-		<img src="https://pokeres.bastionbot.org/images/pokemon/${pokemon.id}.png" alt="">
+		<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png" alt="">
 	</div>
 	<div class="info">
 		<span class="number">#${id}</span>
